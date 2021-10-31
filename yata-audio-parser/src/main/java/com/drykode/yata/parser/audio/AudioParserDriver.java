@@ -22,9 +22,6 @@ public class AudioParserDriver {
 
       Map<String, ByteArrayInputStream> contentMap = new HashMap<>();
 
-      System.out.println(content[0]);
-      System.out.println(content[1]);
-
       contentMap.put(content[0], new ByteArrayInputStream(line.getBytes(StandardCharsets.UTF_8)));
 
       dispatcher.dispatch(contentMap);
