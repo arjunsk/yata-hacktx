@@ -47,6 +47,7 @@ public class MetricsAwareKinesisSink {
 
     KinesisProducerConfiguration configuration =
         new KinesisProducerConfiguration()
+            .setLogLevel("warning")
             .setRegion(config.getRegion())
             .setFailIfThrottled(config.isFailIfThrottled())
             .setRecordMaxBufferedTime(config.getRecordMaxBufferedTime())

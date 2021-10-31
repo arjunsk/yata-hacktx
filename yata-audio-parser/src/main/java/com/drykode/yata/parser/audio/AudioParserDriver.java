@@ -17,16 +17,17 @@ public class AudioParserDriver {
 
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     while (true) {
-      String[] line = br.readLine().split("-");
+      String line = br.readLine();
+      String[] content = line.split("-");
 
-      Map<String, ByteArrayInputStream> content = new HashMap<>();
+      Map<String, ByteArrayInputStream> contentMap = new HashMap<>();
 
-      System.out.println(line[0]);
-      System.out.println(line[1]);
+      System.out.println(content[0]);
+      System.out.println(content[1]);
 
-      content.put(line[0], new ByteArrayInputStream(line[1].getBytes(StandardCharsets.UTF_8)));
+      contentMap.put(content[0], new ByteArrayInputStream(line.getBytes(StandardCharsets.UTF_8)));
 
-      dispatcher.dispatch(content);
+      dispatcher.dispatch(contentMap);
     }
   }
 }

@@ -11,9 +11,14 @@
     </parent>
     <artifactId>yata-sentence-processor</artifactId>
 
-    <dependencies>
+    <dependencies><!-- Kinesis Analytics Dependency-->
 
-        <!-- Kinesis Analytics Dependency-->
+        <dependency>
+            <groupId>com.drykode</groupId>
+            <artifactId>yata-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-kinesisanalytics-runtime</artifactId>
