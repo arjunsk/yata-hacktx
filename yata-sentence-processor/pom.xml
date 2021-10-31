@@ -13,12 +13,27 @@
 
     <dependencies><!-- Kinesis Analytics Dependency-->
 
+        <!-- For Sentimental Analysis: REST Calls-->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>${okhttp.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>${json-simple.version}</version>
+        </dependency>
+
+        <!-- Core Dependency-->
         <dependency>
             <groupId>com.drykode</groupId>
             <artifactId>yata-core</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
+        <!-- Rest of the flink dependency-->
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-kinesisanalytics-runtime</artifactId>

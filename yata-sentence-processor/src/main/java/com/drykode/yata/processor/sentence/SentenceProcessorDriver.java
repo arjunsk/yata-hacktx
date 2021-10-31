@@ -69,13 +69,15 @@ public class SentenceProcessorDriver {
                       Iterable<Sentence> windowElements,
                       Collector<String> out) {
 
+                    String callerID = "";
                     StringBuilder inputSentence = new StringBuilder();
                     for (Sentence currSentence : windowElements) {
                       inputSentence.append(currSentence.getContent());
+                      callerID = currSentence.getCustomerId();
                     }
 
                     String outputEmotion = SentimentalStub.emotion(inputSentence.toString());
-                    out.collect(outputEmotion);
+                    out.collect(callerID + " is " + outputEmotion);
                   }
                 })
             .name("Last 10 Sec Emotion")
