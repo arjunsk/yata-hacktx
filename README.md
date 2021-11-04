@@ -1,5 +1,11 @@
 # Yet Another Tone Analyser - YATA
 
+
+## Run
+1. Update API in [SentimentalStub.java](https://github.com/arjunsk/yata-hacktx/blob/a05da0584fc45c460b2f891eab54eac408d16791/yata-sentence-processor/src/main/java/com/drykode/yata/processor/sentence/utils/SentimentalStub.java#L16) from [ParalleDots](https://www.paralleldots.com/)
+2. Run `mvn clean install`  
+3. Run [SentenceProcessorDriver.java](https://github.com/arjunsk/yata-hacktx/blob/master/yata-sentence-processor/src/main/java/com/drykode/yata/processor/sentence/SentenceProcessorDriver.java) in IDE. Note that, you might need to select maven profile, `run-in-ide`.
+
 ## Inspiration
 Likewise R&D Opportunity + Halloween weekend fun!
 
